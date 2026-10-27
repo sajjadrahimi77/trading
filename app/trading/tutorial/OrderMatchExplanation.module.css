@@ -1,0 +1,34 @@
+.wrapper { display: grid; gap: 14px; }
+.intro { margin: 0; color: #566159; font-size: 13px; line-height: 2; }
+.intro strong { color: #293b30; font-weight: 600; }
+.detail { padding: 12px; border-radius: 8px; background: #f5f7f5; color: #4c5951; font-size: 13px; line-height: 2; }
+.detail strong { color: #235f3b; }
+.change { display: grid; grid-template-columns: 1fr auto 1fr; gap: 7px 12px; align-items: center; text-align: center; font-size: 12px; }
+.change span { color: #768078; }
+.change span:first-child { grid-column: 1; grid-row: 1; }
+.change strong:nth-child(2) { grid-column: 1; grid-row: 2; }
+.change i { grid-column: 2; grid-row: 1 / 3; font-style: normal; color: #7a877e; }
+.change span:nth-child(4) { grid-column: 3; grid-row: 1; }
+.change strong:last-child { grid-column: 3; grid-row: 2; }
+.caption { color: #788179; font-size: 11px; line-height: 1.8; }
+.detail { display: flex; align-items: flex-start; gap: 10px; border: 0; }
+.attentionIcon { display: grid; place-items: center; flex: 0 0 32px; width: 32px; height: 32px; background: transparent; border: 0; box-shadow: none; }
+@media (max-width: 760px) { .intro, .detail { font-size: 12px; } .change { font-size: 11px; } }
+
+.attentionIcon img { display: block; width: 30px; height: 30px; object-fit: contain; }
+.attentionIcon::before, .attentionIcon::after { content: none; display: none; }
+
+.detail { padding: 13px; background: #fafbf9; border: 1px solid #e8ebe6; border-radius: 12px; }
+
+/* Important notes: original image, warm badge, and restrained emphasis. */
+.attentionIcon { width: 42px; height: 42px; flex-basis: 42px; box-sizing: border-box; border-radius: 14px; background: #fff2d7; border: 1px solid #f2dfb7; box-shadow: 0 3px 9px rgb(132 93 21 / 9%), 0 0 0 4px rgb(255 231 181 / 24%); animation: noteArrival 650ms ease-out both; }
+.attentionIcon img { width: 32px; height: 32px; filter: drop-shadow(0 2px 2px rgb(142 91 7 / 16%)); }
+.detail { gap: 14px; padding: 16px; background: #fffdf8; border: 1px solid #eee5d4; border-radius: 14px; box-shadow: 0 3px 12px rgb(91 74 39 / 3%); }
+@keyframes noteArrival { from { opacity: .5; transform: translateY(3px) scale(.92); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .attentionIcon { animation: none; } }
+@media (max-width: 760px) { .attentionIcon { width: 36px; height: 36px; flex-basis: 36px; border-radius: 12px; } .attentionIcon img { width: 29px; height: 29px; } .detail { padding: 13px; gap: 11px; } }
+
+.detail strong { color: #775214; background: #ffedc5; padding: 2px 6px; border-radius: 5px; font-weight: 650; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.change { padding: 10px 0 2px; }
+.change strong { padding: 8px; border-radius: 8px; background: #f3f4f3; font-size: 12px; }
+.change strong:last-child { color: #356b48; background: #edf5ee; }
